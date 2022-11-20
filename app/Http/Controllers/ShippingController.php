@@ -49,8 +49,8 @@ class ShippingController extends Controller
                 'weight' =>  $request->weight,
                 'height' =>  $request->height,
                 'delivery_status_id' => 1,
-                'sub_delivery_status_id' => 93,
-                'latest_change_status' => 10,
+                'sub_delivery_status_id' => 46,
+                'latest_change_status' => 46,
                 'lastest_checkpoint_time' => Carbon::now(),
                 'note' =>  $request->note,
             ];

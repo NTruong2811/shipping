@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
 Route::post('/create-shipping',[ShippingController::class,'CreateShipping']);
 Route::get('/get-shipping',[ShippingController::class,"GetShipping"]);
 Route::post('/test',[ShipDetailController::class,'test']);
@@ -25,3 +26,6 @@ Route::post('/test',[ShipDetailController::class,'test']);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+// dang giao, thong quan, da nhan dc hang

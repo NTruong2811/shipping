@@ -19,5 +19,17 @@ Route::get('/',[HomeController::class,'index'])->name('dashboard');
 Route::get('/shippings',[ShipingsController::class,'index'])->name('shippings');
 Route::put('/shippings',[ShipingsController::class,'update'])->name('shippings_update');
 Route::get('/shippings/edit',[ShipingsController::class,'index'])->name('shippings_edit');
+Route::get('/shipping-detail',[ShipingsController::class,'ShippingDetail'])->name('ShippingDetail');
+
+
+
+
+
+Route::get('/csrf-token', function() {
+    session()->regenerate();
+    return response()->json([
+       "token"=>csrf_token()],
+     200);
+});
 
 
